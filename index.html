@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+	<meta charset="UTF-8">
+	<title> Week 3 Psychic Game	</title>
+
+<style>
+
+
+	h1{
+		color:pink;
+		font-size:100px;
+		text-align: center;
+		border-radius: 
+		border-style:solid;
+	}
+
+	h4{
+		color:pink;
+		font-size:50px;
+		text-align: center;
+
+	}
+
+</style>
+
+<script>
+
+
+	var alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l',
+    'm','n','o','p','q','r','s','t','u','v','w','x','y','z']
+
+    // initial page load game start
+	
+	var randomNumber = [Math.floor(Math.random() * alphabet.length];
+    randomNumber = Math.floor(Math.random() * 26); //a random # between 0-25
+    console.log('ran num: ', randomNumber);
+	var danielleComputerChoice = alphabet[randomNumber];
+    console.log('should be a letter ',danielleComputerChoice);
+
+	document.onkeypress = function(event) {
+	console.log('a key was pushed');
+    console.log('event',event);
+    var userGuess = event.key;
+    console.log('user guess from event.key', userGuess);
+ 
+    if(userGuess === computerChoice){
+     wins++;
+     }
+     
+    else{
+   	guesses--;
+    }
+ 
+    if(guesses === 0){
+     losses++
+   }
+ 	function buildDisplay(){
+    var winDiv document.getElementById('wins').innerHTML = "Wins: " + wins;
+    var lossesDiv document.getElementById('losses').innerHTML = "losses: " + losses;
+    var guessesLeft document.getElementById('guesses').innerHTML = "Guesses left: " + guesses;
+    var guessesSoFar document.getElementById('guessesSoFar').innerHTML = "Guesses So Far" + guesses so far;
+}
+ 
+
+</script>
+
+
+</head>
+
+
+<body>
+
+			<div class="row">
+				<div class="col-md-1"></div>
+				<div class="col-md-6" id="game">
+					<p><h1>The Psychic Game</h1></p>
+					<p><h4>Guess what letter I'm thinking of</h4></p>
+					<p><h4>Wins: Wins 5</h4></p>
+					<p><h4>Losses: losses:</h4></p>
+					<p><h4>Guesses Left: 9</h4></p>
+					<p><h4>Your guesses so far: </h4></p>
+				</div>
+				<div class="col-md-5"></div>
+			</div>
+	</div>
+	
+	<script type="text/javascript" src="assets/javascript/game.js"></script>
+
+
+
+
+
+
+
+</body>
+</html>
